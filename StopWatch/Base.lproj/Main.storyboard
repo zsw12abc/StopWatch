@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAU-kB-HMG">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="dMY-2g-toj">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="neU-kj-ghU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vYC-k4-C6o"/>
+                                    <barButtonItem systemItem="play" id="ofT-KP-SL9">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="FTq-Aq-eVT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sY-p3-EF1">
+                                <rect key="frame" x="44" y="195" width="232" height="177"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="xPS-3M-h3M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dx-d2-FK4">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="StopWatch" id="KbS-iX-3eQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="pause" id="QAE-wM-8p8">
+                                            <connections>
+                                                <action selector="pause:" destination="BYZ-38-t0r" id="Kbv-7C-h59"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lAU-kB-HMG" firstAttribute="trailing" secondItem="4Dx-d2-FK4" secondAttribute="trailing" id="6PO-MR-KTn"/>
+                            <constraint firstAttribute="trailing" secondItem="lAU-kB-HMG" secondAttribute="trailing" id="Lla-Vz-lFi"/>
+                            <constraint firstItem="7sY-p3-EF1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="PkY-3d-I80"/>
+                            <constraint firstItem="7sY-p3-EF1" firstAttribute="centerX" secondItem="4Dx-d2-FK4" secondAttribute="centerX" id="Za3-3p-RWs"/>
+                            <constraint firstItem="4Dx-d2-FK4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dAj-Ht-mPV"/>
+                            <constraint firstItem="lAU-kB-HMG" firstAttribute="leading" secondItem="4Dx-d2-FK4" secondAttribute="leading" id="dxp-nO-cNW"/>
+                            <constraint firstItem="7sY-p3-EF1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pCD-4a-ioX"/>
+                            <constraint firstItem="lAU-kB-HMG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rHC-Il-pWC"/>
+                            <constraint firstItem="lAU-kB-HMG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="raW-yj-kLN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="time" destination="7sY-p3-EF1" id="epo-iN-LTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="376"/>
+        </scene>
+    </scenes>
+</document>
